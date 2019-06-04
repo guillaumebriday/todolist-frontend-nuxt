@@ -24,7 +24,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/css/tailwind.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
@@ -50,6 +52,14 @@ export default {
    ** Build configuration
    */
   build: {
+    postcss: {
+      plugins: [
+        require('postcss-import'),
+        require('postcss-nested'),
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    },
     /*
      ** You can extend webpack config here
      */
