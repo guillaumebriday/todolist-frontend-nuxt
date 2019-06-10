@@ -1,7 +1,14 @@
 import pkg from './package'
+require('dotenv').config()
+
+const BASE_URL = process.env.BASE_URL || 'http://localhost:8000'
 
 export default {
   mode: 'spa',
+
+  env: {
+    baseURL: BASE_URL
+  },
 
   /*
    ** Headers of the page
@@ -32,7 +39,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/font-awesome.js', ssr: false }
+    { src: '~/plugins/font-awesome.js', ssr: false },
+    { src: '~/plugins/directives.js', ssr: false },
+    { src: '~/plugins/axios.js', ssr: false }
   ],
 
   /*
@@ -41,14 +50,18 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv'
   ],
+
   /*
    ** Axios module configuration
    */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: `${BASE_URL}/api/v1/`
   },
+
+  pageTransition: 'fade-in',
 
   /*
    ** Build configuration
@@ -65,7 +78,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
+    extend (config, ctx) {
     }
   }
 }
