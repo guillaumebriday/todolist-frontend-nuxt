@@ -51,7 +51,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-purgecss'
   ],
 
   /*
@@ -67,12 +68,18 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
     postcss: {
       plugins: [
         require('postcss-import'),
         require('postcss-nested'),
         require('tailwindcss'),
-        require('autoprefixer')
+        require('postcss-preset-env')({
+          autoprefixer: {
+            flexbox: 'no-2009'
+          },
+          stage: 3
+        })
       ]
     },
     /*

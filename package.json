@@ -24,6 +24,8 @@
     "cross-env": "^5.2.0",
     "moment": "^2.24.0",
     "nuxt": "^2.4.0",
+    "nuxt-purgecss": "^0.2.1",
+    "postcss-preset-env": "^6.6.0",
     "tailwindcss": "^0.7.4"
   },
   "devDependencies": {
