@@ -50,6 +50,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     'nuxt-purgecss'
@@ -60,6 +61,29 @@ export default {
    */
   axios: {
     baseURL: `${BASE_URL}/api/v1/`
+  },
+
+  /*
+   ** Auth module configuration
+   */
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/auth/login', method: 'post', propertyName: 'access_token' },
+          logout: { url: '/auth/logout', method: 'delete' },
+          user: { url: '/auth/me', method: 'get', propertyName: false }
+        }
+      }
+    },
+
+    redirect: {
+      home: '/app/active'
+    }
+  },
+
+  router: {
+    middleware: ['auth']
   },
 
   pageTransition: 'fade-in',
