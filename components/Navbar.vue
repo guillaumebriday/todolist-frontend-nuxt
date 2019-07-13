@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="isLogged" class="bg-indigo">
+  <nav v-if="$auth.loggedIn" class="bg-indigo">
     <div class="container mx-auto px-4 py-4">
       <div class="flex justify-between">
         <div>
@@ -9,7 +9,7 @@
         </div>
 
         <div>
-          <button class="text-grey-light ml-4 border border-white py-2 px-4 rounded hover:bg-white hover:text-indigo" @click="logout">
+          <button class="text-grey-light ml-4 border border-white py-2 px-4 rounded hover:bg-white hover:text-indigo" @click="$auth.logout()">
             Logout
           </button>
         </div>
@@ -17,20 +17,3 @@
     </div>
   </nav>
 </template>
-
-<script>
-import { mapGetters } from 'vuex'
-
-export default {
-  computed: mapGetters({
-    isLogged: 'auth/isLogged'
-  }),
-
-  methods: {
-    logout () {
-      this.$axios.$delete('/auth/logout')
-      this.$store.dispatch('auth/logout')
-    }
-  }
-}
-</script>

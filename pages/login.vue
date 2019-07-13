@@ -56,6 +56,8 @@ import Form from '@/utils/Form'
 import LoadingButton from '@/components/LoadingButton'
 
 export default {
+  auth: 'guest',
+
   components: {
     LoadingButton
   },
@@ -96,12 +98,17 @@ export default {
 
       this.isLoading = true
 
-      this.form.post('auth/login')
-        .then(data => this.$store.dispatch('auth/login', data))
-        .catch(() => {
-          this.isLoading = false
-          this.form.password = ''
-        })
+      this.$auth.loginWith('local', {
+        data: {
+          email: this.form.email,
+          password: this.form.password
+        }
+      })
+      .catch(({ response }) => {
+        this.form.onFail(response.data.errors)
+        this.form.password = ''
+        this.isLoading = false
+      })
     }
   }
 }
