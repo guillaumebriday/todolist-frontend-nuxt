@@ -5,6 +5,7 @@ const BASE_URL = process.env.BASE_URL || 'http://localhost:8000'
 
 export default {
   mode: 'spa',
+  loading: false,
 
   env: {
     baseURL: BASE_URL
@@ -22,11 +23,6 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
 
   /*
    ** Global CSS
