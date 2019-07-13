@@ -58,13 +58,12 @@ export const actions = {
 
     dispatch('fetchUser')
 
-    this.$router.push({ name: 'TaskList', params: { status: 'active' } })
+    this.$router.push({ name: 'app-status', params: { status: 'active' } })
   },
 
   logout ({ commit }) {
     commit(types.LOGOUT)
-    commit('clearTasks')
 
-    this.$router.push({ name: 'Login' })
+    this.$router.push({ name: 'login' })
   }
 }

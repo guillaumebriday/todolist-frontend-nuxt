@@ -7,13 +7,24 @@
         </nuxt-link>
       </h1>
 
-      <form class="form-card" @submit.prevent="login" @keydown="form.errors.clear($event.target.name)">
+      <form class="form-card" @submit.prevent="register" @keydown="form.errors.clear($event.target.name)">
         <div class="mb-4">
-          <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+          <label class="block text-grey-darker text-sm font-bold mb-2" for="name">
+            Name
+          </label>
+
+          <input id="name" v-model="form.name" v-focus class="form-control" type="text" :class="{ 'border-red mb-3' : form.errors.has('name') }" name="name" placeholder="Name">
+          <p v-if="form.errors.has('name')" class="text-red text-xs italic">
+            {{ form.errors.get('name') }}
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
             Email
           </label>
 
-          <input id="email" v-model="form.email" v-focus class="form-control" :class="{ 'border-red mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
+          <input id="username" v-model="form.email" class="form-control" :class="{ 'border-red mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
           <p v-if="form.errors.has('email')" class="text-red text-xs italic">
             {{ form.errors.get('email') }}
           </p>
@@ -30,14 +41,23 @@
           </p>
         </div>
 
+        <div class="mb-6">
+          <label class="block text-grey-darker text-sm font-bold mb-2" for="password_confirmation">
+            Password confirmation
+          </label>
+
+          <input id="password_confirmation" v-model="form.password_confirmation" class="form-control" type="password" name="password_confirmation" placeholder="Password confirmation">
+        </div>
+
         <loading-button :is-loading="isLoading" :disabled="isDisabled" :class="[{ 'opacity-50 cursor-not-allowed': isDisabled }]" class="btn-indigo w-full">
-          Sign In
+          Register
         </loading-button>
 
         <div class="mt-4 text-sm">
-          Don't have an account?
-          <nuxt-link class="inline-block font-bold text-indigo hover:text-indigo-darker" to="/register" exact>
-            Register now
+          Already have an account ?
+
+          <nuxt-link class="inline-block font-bold text-indigo hover:text-indigo-darker" to="/login" exact>
+            Log in now
           </nuxt-link>
         </div>
       </form>
@@ -60,19 +80,28 @@ export default {
     LoadingButton
   },
 
+  head () {
+    return {
+      title: 'Register'
+    }
+  },
+
   data () {
     return {
       form: new Form({
+        name: '',
         email: '',
-        password: ''
+        password: '',
+        password_confirmation: ''
       }),
-      isLoading: false
+      isLoading: false,
+      error: false
     }
   },
 
   transition (to, from) {
-    if (from && from.name === 'Register') {
-      return 'fade-out-right'
+    if (from && from.name === 'login') {
+      return 'fade-out-left'
     }
   },
 
@@ -83,18 +112,20 @@ export default {
   },
 
   methods: {
-    login () {
+    register () {
       if (this.isDisabled) {
         return false
       }
 
       this.isLoading = true
 
-      this.form.post('auth/login')
+      this.form.post('auth/register')
         .then(data => this.$store.dispatch('auth/login', data))
         .catch(() => {
           this.isLoading = false
+
           this.form.password = ''
+          this.form.password_confirmation = ''
         })
     }
   }
