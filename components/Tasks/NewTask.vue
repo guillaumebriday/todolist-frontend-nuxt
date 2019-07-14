@@ -28,11 +28,11 @@
 </template>
 
 <script>
+import moment from 'moment'
+import { mixin as clickaway } from 'vue-clickaway'
 import Form from '@/utils/Form'
 import TaskForm from '@/components/Tasks/TaskForm'
 import LoadingButton from '@/components/LoadingButton'
-import moment from 'moment'
-import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
   components: {

@@ -55,10 +55,10 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 import Task from '@/components/Tasks/Task'
 import NewTask from '@/components/Tasks/NewTask'
 import LoadingButton from '@/components/LoadingButton'
-import { mapGetters, mapMutations } from 'vuex'
 
 export default {
   components: {
@@ -79,18 +79,6 @@ export default {
       isRemoveLoading: false,
       isAnimated: true,
       initialTasks: []
-    }
-  },
-
-  mounted () {
-    this.getTasks()
-
-    if (window.Echo) {
-      window.Echo.private(`App.User.${this.$auth.user.data.id}`)
-        .listen('TaskCreated', e => this.addTask(e.task))
-        .listen('TaskUpdated', e => this.updateTask(e.task))
-        .listen('TaskDeleted', e => this.removeTask(e.task))
-        .listen('TasksDeleted', e => this.tasksDeleted())
     }
   },
 
@@ -123,6 +111,18 @@ export default {
       }
 
       return this.$store.getters['tasks/timeToChill'](this.status)
+    }
+  },
+
+  mounted () {
+    this.getTasks()
+
+    if (window.Echo) {
+      window.Echo.private(`App.User.${this.$auth.user.data.id}`)
+        .listen('TaskCreated', e => this.addTask(e.task))
+        .listen('TaskUpdated', e => this.updateTask(e.task))
+        .listen('TaskDeleted', e => this.removeTask(e.task))
+        .listen('TasksDeleted', e => this.tasksDeleted())
     }
   },
 
@@ -191,4 +191,3 @@ export default {
   margin: 0;
 }
 </style>
-

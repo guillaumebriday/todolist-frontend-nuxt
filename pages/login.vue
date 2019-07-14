@@ -99,12 +99,12 @@ export default {
       this.isLoading = true
 
       this.$auth.loginWith('local', { data: this.form.data() })
-      .catch(({ response }) => {
-        this.form.password = ''
-        this.form.onFail(response.data.errors)
+        .catch(({ response }) => {
+          this.form.password = ''
+          this.form.onFail(response.data.errors)
 
-        this.isLoading = false
-      })
+          this.isLoading = false
+        })
     }
   }
 }

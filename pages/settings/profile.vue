@@ -91,7 +91,7 @@ export default {
     return {
       isLoading: false,
       isDeleteLoading: false,
-      form: new Form
+      form: new Form()
     }
   },
 
@@ -113,14 +113,14 @@ export default {
     }
   },
 
-  mounted () {
-    this.setForm()
-  },
-
   watch: {
     user () {
       this.setForm()
     }
+  },
+
+  mounted () {
+    this.setForm()
   },
 
   methods: {
@@ -140,16 +140,16 @@ export default {
       this.form.errors.clear()
 
       this.$axios.put(`/users/${this.user.id}`, this.form.data())
-      .then(({ data }) => {
-        this.isLoading = false
+        .then(({ data }) => {
+          this.isLoading = false
 
-        this.$auth.fetchUser()
-      })
-      .catch(({ response }) => {
-        this.isLoading = false
+          this.$auth.fetchUser()
+        })
+        .catch(({ response }) => {
+          this.isLoading = false
 
-        this.form.onFail(response.data.errors)
-      })
+          this.form.onFail(response.data.errors)
+        })
     },
 
     deleteAccount () {
