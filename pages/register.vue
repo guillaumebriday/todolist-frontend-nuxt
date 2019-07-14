@@ -56,7 +56,7 @@
         <div class="mt-4 text-sm">
           Already have an account ?
 
-          <nuxt-link class="inline-block font-bold text-indigo hover:text-indigo-darker" to="/login" exact>
+          <nuxt-link class="inline-block font-bold text-indigo hover:text-indigo-darker" :to="{ name: 'login' }" exact>
             Log in now
           </nuxt-link>
         </div>

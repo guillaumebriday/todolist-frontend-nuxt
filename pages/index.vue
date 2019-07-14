@@ -13,11 +13,11 @@
             </h2>
 
             <div class="flex flex-col sm:flex-row justify-center pt-8">
-              <nuxt-link class="bg-indigo no-underline hover:bg-indigo-dark text-xl text-white font-semibold px-8 py-2 rounded whitespace-no-wrap mb-2 sm:mb-0 sm:mr-2" to="/register" exact>
+              <nuxt-link class="bg-indigo no-underline hover:bg-indigo-dark text-xl text-white font-semibold px-8 py-2 rounded whitespace-no-wrap mb-2 sm:mb-0 sm:mr-2" :to="{ name: 'register' }" exact>
                 Register
               </nuxt-link>
 
-              <nuxt-link class="bg-transparent no-underline text-xl text-indigo font-semibold hover:text-indigo-dark px-8 py-2 border border-indigo-lighter hover:border-indigo-light rounded whitespace-no-wrap mt-2 sm:mt-0 sm:ml-2" to="/login" exact>
+              <nuxt-link class="bg-transparent no-underline text-xl text-indigo font-semibold hover:text-indigo-dark px-8 py-2 border border-indigo-lighter hover:border-indigo-light rounded whitespace-no-wrap mt-2 sm:mt-0 sm:ml-2" :to="{ name: 'login' }" exact>
                 Login
               </nuxt-link>
             </div>
@@ -154,7 +154,7 @@
                     </span>
                   </div>
                 </div>
-                <nuxt-link class="bg-indigo hover:bg-indigo-dark no-underline text-xl text-white font-semibold px-6 py-3 text-center rounded whitespace-no-wrap w-full" :to="{ name: 'Register'}" exact>
+                <nuxt-link class="bg-indigo hover:bg-indigo-dark no-underline text-xl text-white font-semibold px-6 py-3 text-center rounded whitespace-no-wrap w-full" :to="{ name: 'register'}" exact>
                   Getting started
                 </nuxt-link>
               </div>
