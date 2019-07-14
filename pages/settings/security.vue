@@ -124,7 +124,6 @@ export default {
           this.isLoading = false
 
           this.form.onFail(response.data.errors)
-
           this.form.resetFields()
         })
     }

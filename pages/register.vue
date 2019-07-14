@@ -121,18 +121,14 @@ export default {
 
       this.isLoading = true
 
-      this.form.post('auth/register')
+      this.$axios.post('auth/register', this.form.data())
         .then(() => {
-          this.$auth.loginWith('local', {
-            data: {
-              email: this.form.email,
-              password: this.form.password
-            }
-          })
+          this.$auth.loginWith('local', { data: this.form.data() })
         })
-        .catch(() => {
+        .catch(({ response }) => {
           this.isLoading = false
 
+          this.form.onFail(response.data.errors)
           this.form.password = ''
           this.form.password_confirmation = ''
         })

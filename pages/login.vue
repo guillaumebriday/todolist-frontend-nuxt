@@ -98,15 +98,11 @@ export default {
 
       this.isLoading = true
 
-      this.$auth.loginWith('local', {
-        data: {
-          email: this.form.email,
-          password: this.form.password
-        }
-      })
+      this.$auth.loginWith('local', { data: this.form.data() })
       .catch(({ response }) => {
-        this.form.onFail(response.data.errors)
         this.form.password = ''
+        this.form.onFail(response.data.errors)
+
         this.isLoading = false
       })
     }

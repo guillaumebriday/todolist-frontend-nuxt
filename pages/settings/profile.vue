@@ -139,10 +139,7 @@ export default {
       this.isLoading = true
       this.form.errors.clear()
 
-      this.$axios.put(`/users/${this.user.id}`, {
-        email: this.form.email,
-        name: this.form.name
-      })
+      this.$axios.put(`/users/${this.user.id}`, this.form.data())
       .then(({ data }) => {
         this.isLoading = false
 
