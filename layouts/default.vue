@@ -16,7 +16,6 @@ export default {
 
   head () {
     return {
-      title: this.$route.name,
       titleTemplate: '%s | Todolist',
       bodyAttrs: {
         class: 'bg-grey-lighter font-sans'
