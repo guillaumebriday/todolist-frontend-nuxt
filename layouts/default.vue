@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-grey-lighter font-sans">
+  <div>
     <navbar />
 
     <nuxt class="animated" />
@@ -17,7 +17,10 @@ export default {
   head () {
     return {
       title: this.$route.name,
-      titleTemplate: '%s | Todolist'
+      titleTemplate: '%s | Todolist',
+      bodyAttrs: {
+        class: 'bg-grey-lighter font-sans'
+      }
     }
   }
 }
