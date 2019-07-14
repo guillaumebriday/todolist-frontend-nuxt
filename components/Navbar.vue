@@ -9,6 +9,11 @@
         </div>
 
         <div>
+          <nuxt-link class="text-white no-underline hover:underline ml-4" :to="{ name: 'settings-profile' }" exact>
+            <fa icon="user" class="mr" />
+            Profile
+          </nuxt-link>
+
           <button class="text-grey-light ml-4 border border-white py-2 px-4 rounded hover:bg-white hover:text-indigo" @click="$auth.logout()">
             Logout
           </button>
