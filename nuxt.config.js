@@ -37,7 +37,9 @@ export default {
   plugins: [
     { src: '~/plugins/font-awesome.js', ssr: false },
     { src: '~/plugins/directives.js', ssr: false },
-    { src: '~/plugins/axios.js', ssr: false }
+    { src: '~/plugins/axios.js', ssr: false },
+    { src: '~/plugins/datetime.js', ssr: false },
+    { src: '~/plugins/laravel-echo.js', ssr: false }
   ],
 
   /*
