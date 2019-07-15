@@ -1,7 +1,16 @@
+import path from 'path'
+import PurgecssPlugin from 'purgecss-webpack-plugin'
+import glob from 'glob-all'
 import pkg from './package'
 require('dotenv').config()
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:8000'
+
+class TailwindExtractor {
+  static extract (content) {
+    return content.match(/[A-Za-z0-9-:/]+/g) || []
+  }
+}
 
 export default {
   mode: 'spa',
@@ -50,8 +59,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth',
     '@nuxtjs/dotenv',
-    '@nuxtjs/google-analytics',
-    'nuxt-purgecss'
+    '@nuxtjs/google-analytics'
   ],
 
   googleAnalytics: {
@@ -107,6 +115,27 @@ export default {
           stage: 3
         })
       ]
+    }
+  },
+
+  extend (config, { isDev }) {
+    if (!isDev) {
+      config.plugins.push(
+        new PurgecssPlugin({
+          paths: glob.sync([
+            path.join(__dirname, './pages/**/*.vue'),
+            path.join(__dirname, './layouts/**/*.vue'),
+            path.join(__dirname, './components/**/*.vue')
+          ]),
+          extractors: [
+            {
+              extractor: TailwindExtractor,
+              extensions: ['vue']
+            }
+          ],
+          whitelist: ['fade-']
+        })
+      )
     }
   }
 }
