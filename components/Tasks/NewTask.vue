@@ -71,7 +71,7 @@ export default {
 
       this.$store.dispatch('tasks/addTask', {
         title: this.form.title,
-        due_at: dayjs(this.form.due_at).second(0)
+        due_at: dayjs(this.form.due_at).isValid() ? dayjs(this.form.due_at).second(0) : null
       })
         .then(() => {
           this.form.reset()
