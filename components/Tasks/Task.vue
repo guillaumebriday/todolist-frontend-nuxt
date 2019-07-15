@@ -55,10 +55,15 @@
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway'
-import moment from 'moment'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
 import Form from '@/utils/Form'
 import TaskForm from '@/components/Tasks/TaskForm'
 import LoadingButton from '@/components/LoadingButton'
+
+dayjs.extend(relativeTime)
+dayjs.extend(advancedFormat)
 
 export default {
   components: {
@@ -96,11 +101,11 @@ export default {
     },
 
     fromNow () {
-      return moment(this.task.due_at).fromNow()
+      return dayjs(this.task.due_at).fromNow()
     },
 
     toDate () {
-      return moment(this.task.due_at).format('dddd, MMMM Do YYYY, h:mm:ss a')
+      return dayjs(this.task.due_at).format('dddd, MMMM Do YYYY, h:mm:ss a')
     }
   },
 
@@ -142,7 +147,7 @@ export default {
         task: this.task,
         params: {
           title: this.form.title,
-          due_at: moment(this.form.due_at).seconds(0)
+          due_at: dayjs(this.form.due_at).second(0)
         }
       })
         .then(data => {

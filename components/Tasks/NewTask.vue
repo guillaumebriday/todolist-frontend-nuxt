@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import moment from 'moment'
+import dayjs from 'dayjs'
 import { mixin as clickaway } from 'vue-clickaway'
 import Form from '@/utils/Form'
 import TaskForm from '@/components/Tasks/TaskForm'
@@ -71,7 +71,7 @@ export default {
 
       this.$store.dispatch('tasks/addTask', {
         title: this.form.title,
-        due_at: moment(this.form.due_at).seconds(0)
+        due_at: dayjs(this.form.due_at).second(0)
       })
         .then(() => {
           this.form.reset()
