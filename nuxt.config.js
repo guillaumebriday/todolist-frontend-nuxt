@@ -51,8 +51,13 @@ export default {
     '@nuxtjs/auth',
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics',
     'nuxt-purgecss'
   ],
+
+  googleAnalytics: {
+    id: 'UA-54003772-12'
+  },
 
   /*
    ** Axios module configuration
