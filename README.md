@@ -1,7 +1,7 @@
 # Todolist-frontend-nuxt Application
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68286221-cb5f-4960-834f-0ae250395090/deploy-status)](https://app.netlify.com/sites/todolist-frontend-vuejs/deploys)
-****
+[![Netlify Status](https://api.netlify.com/api/v1/badges/61117a85-2c1d-4308-be10-3c77413e8a74/deploy-status)](https://app.netlify.com/sites/todolist-frontend-nuxt/deploys)
+
 > Frontend for https://github.com/guillaumebriday/todolist-backend-laravel app, built for a serie of articles on my [blog](https://guillaumebriday.fr/).
 
 > If you want to see this project in plain [Vue.js](https://vuejs.org/), I created the same application available here: [todolist-frontend-vuejs](https://github.com/guillaumebriday/todolist-frontend-vuejs).
