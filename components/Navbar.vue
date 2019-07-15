@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="$auth.loggedIn" class="bg-indigo">
+  <nav v-if="$auth.loggedIn" class="bg-indigo-500">
     <div class="container mx-auto px-4 py-4">
       <div class="flex justify-between">
         <div>
@@ -14,7 +14,7 @@
             Profile
           </nuxt-link>
 
-          <button class="text-grey-light ml-4 border border-white py-2 px-4 rounded hover:bg-white hover:text-indigo" @click="$auth.logout()">
+          <button class="text-gray-400 ml-4 border border-white py-2 px-4 rounded hover:bg-white hover:text-indigo-500" @click="$auth.logout()">
             Logout
           </button>
         </div>

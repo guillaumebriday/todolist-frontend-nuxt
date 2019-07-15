@@ -1,29 +1,29 @@
 .btn-indigo {
-  @apply .bg-indigo .text-white .font-bold .py-2 .px-4 .rounded;
+  @apply .bg-indigo-500 .text-white .font-bold .py-2 .px-4 .rounded;
 
   &:hover {
-    @apply .bg-indigo-dark;
+    @apply .bg-indigo-600;
   }
 }
 
 .btn-red {
-  @apply .bg-red .text-white .font-bold .py-2 .px-4 .rounded;
+  @apply .bg-red-500 .text-white .font-bold .py-2 .px-4 .rounded;
 
   &:hover {
-    @apply .bg-red-dark;
+    @apply .bg-red-600;
   }
 }
 
 .pill-active {
-  @apply .text-indigo .border-b-2 .border-indigo;
+  @apply .text-indigo-500 .border-b-2 .border-indigo-500;
 }
 
 
 .pill-inactive {
-  @apply .text-grey-dark .border-indigo-light;
+  @apply .text-gray-600 .border-indigo-400;
 
   &:hover {
-    @apply .text-indigo-light .border-b;
+    @apply .text-indigo-400 .border-b;
   }
 }
 

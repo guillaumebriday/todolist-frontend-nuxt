@@ -18,7 +18,7 @@ export default {
     return {
       titleTemplate: '%s | Todolist',
       bodyAttrs: {
-        class: 'bg-grey-lighter font-sans'
+        class: 'bg-gray-200 font-sans'
       }
     }
   }

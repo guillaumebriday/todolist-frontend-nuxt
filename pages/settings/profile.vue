@@ -8,7 +8,7 @@
       <form class="w-full max-w-md" @submit.prevent="update" @keydown="form.errors.clear($event.target.name)">
         <div class="md:flex md:items-center mb-4">
           <div class="md:w-1/3">
-            <label class="block text-grey-darker md:text-right text-sm font-bold mb-1 pr-4" for="name">
+            <label class="block text-gray-800 md:text-right text-sm font-bold mb-1 pr-4" for="name">
               Name
             </label>
           </div>
@@ -23,7 +23,7 @@
 
         <div class="md:flex md:items-center mb-6">
           <div class="md:w-1/3">
-            <label class="block text-grey-darker md:text-right text-sm font-bold mb-1 pr-4" for="email">
+            <label class="block text-gray-800 md:text-right text-sm font-bold mb-1 pr-4" for="email">
               Email
             </label>
           </div>

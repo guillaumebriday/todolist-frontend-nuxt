@@ -1,5 +1,5 @@
 <template>
-  <div v-if="error" class="bg-red-lightest border-t-4 border-red shadow-md text-red-dark px-6 py-3 rounded relative mb-3" role="alert">
+  <div v-if="error" class="bg-red-100 border-t-4 border-red shadow-md text-red-600 px-6 py-3 rounded relative mb-3" role="alert">
     <div class="flex">
       <fa icon="exclamation-triangle" class="mr-2" />
 
@@ -12,7 +12,7 @@
         </span>
       </div>
 
-      <span class="absolute pin-t pin-b pin-r px-4 py-3 cursor-pointer" @click.prevent="error = null">
+      <span class="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer" @click.prevent="error = null">
         <fa icon="times" />
       </span>
     </div>

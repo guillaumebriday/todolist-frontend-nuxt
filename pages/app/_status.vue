@@ -1,26 +1,26 @@
 <template>
   <div>
     <div class="flex justify-center shadow">
-      <nuxt-link :class="[status === 'active' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-no-grow no-underline" :to="{name: 'app-status', params: { status: 'active' }}" exact>
+      <nuxt-link :class="[status === 'active' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-grow-0 no-underline" :to="{name: 'app-status', params: { status: 'active' }}" exact>
         Active ({{ activeTasks.length }})
       </nuxt-link>
 
-      <nuxt-link :class="[status === 'all' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-no-grow no-underline" :to="{name: 'app-status', params: { status: 'all' }}" exact>
+      <nuxt-link :class="[status === 'all' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-grow-0 no-underline" :to="{name: 'app-status', params: { status: 'all' }}" exact>
         All ({{ allTasks.length }})
       </nuxt-link>
 
-      <nuxt-link :class="[status === 'completed' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-no-grow no-underline" :to="{name: 'app-status', params: { status: 'completed' }}" exact>
+      <nuxt-link :class="[status === 'completed' ? 'pill-active' : 'pill-inactive']" class="pill-default lg:flex-grow-0 no-underline" :to="{name: 'app-status', params: { status: 'completed' }}" exact>
         Completed ({{ completedTasks.length }})
       </nuxt-link>
     </div>
 
     <div class="container mx-auto mt-3 px-4">
-      <div v-if="false && isLoading" class="text-xl text-center my-6 text-grey-darker">
+      <div v-if="false && isLoading" class="text-xl text-center my-6 text-gray-800">
         <fa icon="spinner" class="mr-1" spin />
         Loading
       </div>
 
-      <transition-group class="list-reset relative" name="fade-out-left" tag="ul">
+      <transition-group class="relative" name="fade-out-left" tag="ul">
         <task v-for="task in tasks"
               :key="task.id"
               :task="task"
@@ -37,7 +37,7 @@
           :class="[isRemoveLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:underline hover:text-red']"
           type="button"
           icon="trash"
-          class="text-grey-darker text-sm"
+          class="text-gray-800 text-sm"
           @click.native="deleteTasks"
         >
           Delete completed tasks

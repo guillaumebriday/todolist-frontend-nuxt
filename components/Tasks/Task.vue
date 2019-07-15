@@ -13,7 +13,7 @@
             Save
           </loading-button>
 
-          <span class="ml-4 text-grey-darker text-sm cursor-pointer hover:underline" @click="cancelEdit">
+          <span class="ml-4 text-gray-800 text-sm cursor-pointer hover:underline" @click="cancelEdit">
             Cancel
           </span>
         </div>
@@ -23,7 +23,7 @@
           :class="[isRemoveLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:underline hover:text-red']"
           type="button"
           icon="trash"
-          class="mx-4 text-grey-darker text-sm"
+          class="mx-4 text-gray-800 text-sm"
           @click.native="removeTask"
         >
           Delete
@@ -34,19 +34,19 @@
     <div v-else class="bg-white leading-none rounded-lg shadow overflow-hidden p-3 mb-4">
       <div class="flex items-center">
         <div class="flex-grow">
-          <p class="font-semibold text-lg mx-2 text-left flex-auto cursor-pointer" :class="{'line-through text-grey' : task.is_completed}" @click="editTask = true">
+          <p class="font-semibold text-lg mx-2 text-left flex-auto cursor-pointer" :class="{'line-through text-gray-500' : task.is_completed}" @click="editTask = true">
             {{ task.title }}
           </p>
 
-          <span v-if="task.due_at" :title="toDate" class="flex flex-no-shrink mr-2 mt-2 px-2 py-1 text-xs cursor-pointer" :class="[task.is_completed ? 'line-through text-grey' : 'text-grey-dark']" @click="editTask = true">
+          <span v-if="task.due_at" :title="toDate" class="flex flex-shrink-0 mr-2 mt-2 px-2 py-1 text-xs cursor-pointer" :class="[task.is_completed ? 'line-through text-gray-500' : 'text-gray-600']" @click="editTask = true">
             <fa :icon="['far', 'clock']" class="mr-1" /> {{ fromNow }}
           </span>
         </div>
 
         <!-- Checkbox -->
-        <div :class="[task.is_completed ? 'bg-indigo' : 'border-2', {'cursor-not-allowed' : isToggleLoading}]" class="rounded-full bg-white h-6 w-6 cursor-pointer flex items-center justify-center" @click="toggleCompleted">
-          <fa v-if="isToggleLoading" icon="spinner" :class="[task.is_completed ? 'text-white' : 'text-indigo']" spin />
-          <fa v-else icon="check" class="text-white" :class="{'hover:text-indigo' : ! task.is_completed}" />
+        <div :class="[task.is_completed ? 'bg-indigo-500' : 'border-2', {'cursor-not-allowed' : isToggleLoading}]" class="rounded-full bg-white h-6 w-6 cursor-pointer flex items-center justify-center" @click="toggleCompleted">
+          <fa v-if="isToggleLoading" icon="spinner" :class="[task.is_completed ? 'text-white' : 'text-indigo-500']" spin />
+          <fa v-else icon="check" class="text-white" :class="{'hover:text-indigo-500' : ! task.is_completed}" />
         </div>
       </div>
     </div>

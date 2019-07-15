@@ -13,13 +13,13 @@
             Add
           </loading-button>
 
-          <span class="ml-4 text-grey-darker text-sm cursor-pointer hover:underline" @click="cancel">
+          <span class="ml-4 text-gray-800 text-sm cursor-pointer hover:underline" @click="cancel">
             Cancel
           </span>
         </div>
       </task-form>
 
-      <button v-else class="animated fastest hover:underline text-grey-darker text-sm cursor-pointer" @click="isShown = true">
+      <button v-else class="animated fastest hover:underline text-gray-800 text-sm cursor-pointer" @click="isShown = true">
         <fa icon="plus" class="mr-1" />
         Add task
       </button>

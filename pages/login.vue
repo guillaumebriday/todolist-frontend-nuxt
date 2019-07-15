@@ -2,14 +2,14 @@
   <div class="h-screen flex justify-center items-center">
     <div class="w-full max-w-xs">
       <h1 class="text-center mb-6">
-        <nuxt-link class="text-black no-underline hover:underline" to="/" exact>
+        <nuxt-link class="text-gray-900 no-underline hover:underline" to="/" exact>
           Todolist
         </nuxt-link>
       </h1>
 
       <form class="form-card" @submit.prevent="login" @keydown="form.errors.clear($event.target.name)">
         <div class="mb-4">
-          <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+          <label class="block text-gray-800 text-sm font-bold mb-2" for="email">
             Email
           </label>
 
@@ -20,7 +20,7 @@
         </div>
 
         <div class="mb-6">
-          <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+          <label class="block text-gray-800 text-sm font-bold mb-2" for="password">
             Password
           </label>
 
@@ -36,14 +36,14 @@
 
         <div class="mt-4 text-sm">
           Don't have an account?
-          <nuxt-link class="inline-block font-bold text-indigo hover:text-indigo-darker" :to="{ name: 'register' }" exact>
+          <nuxt-link class="inline-block font-bold text-indigo-500 hover:text-indigo-800" :to="{ name: 'register' }" exact>
             Register now
           </nuxt-link>
         </div>
       </form>
 
-      <p class="text-center text-grey text-xs">
-        Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend-vuejs" class="text-grey">
+      <p class="text-center text-gray-500 text-xs">
+        Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend-vuejs" class="text-gray-500">
           <fa :icon="['fab', 'github']" /> GitHub
         </a>.
       </p>
