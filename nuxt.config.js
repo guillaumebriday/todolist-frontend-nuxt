@@ -103,11 +103,6 @@ export default {
           stage: 3
         })
       ]
-    },
-    /*
-     ** You can extend webpack config here
-     */
-    extend (config, ctx) {
     }
   }
 }
