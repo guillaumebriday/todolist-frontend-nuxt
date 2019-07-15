@@ -1,5 +1,5 @@
 .form-card {
-  @apply .bg-white .shadow-md .rounded .border-indigo-500 .border-t-4 .px-8 .pt-6 .pb-8 .mb-4;
+  @apply .bg-white .shadow-xl .rounded .border-indigo-500 .border-t-4 .px-8 .pt-6 .pb-8 .mb-4;
 }
 
 .form-control {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="bg-indigo-100 py-20">
-      <div class="w-5/6 max-w-lg ml-auto mr-auto h-full">
+      <div class="w-5/6 max-w-3xl ml-auto mr-auto h-full">
         <div class="flex items-center justify-center text-center h-full">
           <div>
             <h1 class="text-4xl sm:text-5xl font-semibold mb-4">
@@ -27,11 +27,11 @@
     </section>
 
     <section class="bg-gray-100 py-8">
-      <div class="w-5/6 max-w-2xl ml-auto mr-auto mt-8 mb-8">
+      <div class="w-5/6 max-w-6xl ml-auto mr-auto mt-8 mb-8">
         <div class="flex flex-wrap -mx-6 -my-6">
           <div class="w-full sm:w-1/2 lg:w-1/4 px-6 py-6">
             <div class="mb-8">
-              <fa :icon="['far', 'lightbulb']" size="2x" class="text-indigo" />
+              <fa :icon="['far', 'lightbulb']" size="2x" class="text-indigo-500" />
             </div>
             <h3 class="text-3xl font-semibold mb-3">
               Never forget your tasks
@@ -42,7 +42,7 @@
           </div>
           <div class="w-full sm:w-1/2 lg:w-1/4 px-6 py-6">
             <div class="mb-8">
-              <fa :icon="['far', 'clock']" size="2x" class="text-indigo" />
+              <fa :icon="['far', 'clock']" size="2x" class="text-indigo-500" />
             </div>
             <h3 class="text-3xl font-semibold mb-3">
               Real time application
@@ -53,7 +53,7 @@
           </div>
           <div class="w-full sm:w-1/2 lg:w-1/4 px-6 py-6">
             <div class="mb-8">
-              <fa icon="lock" size="2x" class="text-indigo" />
+              <fa icon="lock" size="2x" class="text-indigo-500" />
             </div>
             <h3 class="text-3xl font-semibold mb-3">
               Authentication with JWT
@@ -64,7 +64,7 @@
           </div>
           <div class="w-full sm:w-1/2 lg:w-1/4 px-6 py-6">
             <div class="mb-8">
-              <fa icon="mobile-alt" size="2x" class="text-indigo" />
+              <fa icon="mobile-alt" size="2x" class="text-indigo-500" />
             </div>
             <h3 class="text-3xl font-semibold mb-3">
               Responsive Design
@@ -78,7 +78,7 @@
     </section>
 
     <section class="bg-white py-8">
-      <div class="w-5/6 max-w-lg ml-auto mr-auto mt-8 mb-8">
+      <div class="w-5/6 max-w-3xl ml-auto mr-auto mt-8 mb-8">
         <div class="flex flex-col justify-center text-center pb-8">
           <h2 class="text-5xl font-semibold mb-4">
             Ready for production. Completely Open source and free.
@@ -88,7 +88,7 @@
           </h3>
         </div>
 
-        <div class="bg-white rounded shadow-lg overflow-hidden">
+        <div class="bg-white rounded shadow-2xl overflow-hidden">
           <div class="flex flex-col-reverse md:flex-row">
             <div class="flex-1">
               <div class="bg-gray-100 p-8">
@@ -99,7 +99,7 @@
                   <li class="mb-4">
                     <div class="flex items-center">
                       <div class="mr-4">
-                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo" />
+                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo-500" />
                       </div>
                       <p class="text-lg leading-normal">
                         Unlimited tasks
@@ -109,7 +109,7 @@
                   <li class="mb-4">
                     <div class="flex items-center">
                       <div class="mr-4">
-                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo" />
+                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo-500" />
                       </div>
                       <p class="text-lg leading-normal">
                         Real time application with Websockets
@@ -119,7 +119,7 @@
                   <li class="mb-4">
                     <div class="flex items-center">
                       <div class="mr-4">
-                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo" />
+                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo-500" />
                       </div>
                       <p class="text-lg leading-normal">
                         Authentication with JWT
@@ -129,7 +129,7 @@
                   <li class="">
                     <div class="flex items-center">
                       <div class="mr-4">
-                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo" />
+                        <fa :icon="['far', 'check-circle']" size="2x" class="text-indigo-500" />
                       </div>
                       <p class="text-lg leading-normal">
                         Responsive Design
@@ -166,7 +166,7 @@
 
     <footer class="bg-gray-100 py-8">
       <p class="text-center text-gray-500 text-xs mb-4">
-        Made with <fa icon="heart" class="text-red" /> by <a href="https://guillaumebriday.fr" class="text-gray-500">
+        Made with <fa icon="heart" class="text-red-500" /> by <a href="https://guillaumebriday.fr" class="text-gray-500">
           Guillaume Briday
         </a>.
       </p>

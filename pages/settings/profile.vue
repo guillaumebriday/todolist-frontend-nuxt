@@ -14,8 +14,8 @@
           </div>
 
           <div class="md:w-2/3">
-            <input id="name" v-model="form.name" v-focus class="form-control" :class="{ 'border-red mb-3' : form.errors.has('name') }" type="text" name="name" placeholder="Name">
-            <p v-if="form.errors.has('name')" class="text-red text-xs italic">
+            <input id="name" v-model="form.name" v-focus class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('name') }" type="text" name="name" placeholder="Name">
+            <p v-if="form.errors.has('name')" class="text-red-500 text-xs italic">
               {{ form.errors.get('name') }}
             </p>
           </div>
@@ -29,8 +29,8 @@
           </div>
 
           <div class="md:w-2/3">
-            <input id="email" v-model="form.email" class="form-control" :class="{ 'border-red mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
-            <p v-if="form.errors.has('email')" class="text-red text-xs italic">
+            <input id="email" v-model="form.email" class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
+            <p v-if="form.errors.has('email')" class="text-red-500 text-xs italic">
               {{ form.errors.get('email') }}
             </p>
           </div>
@@ -46,7 +46,7 @@
         </div>
       </form>
 
-      <h2 class="font-bold text-red text-xl mb-6 pb-6 border-b">
+      <h2 class="font-bold text-red-500 text-xl mb-6 pb-6 border-b">
         Delete your account
       </h2>
 

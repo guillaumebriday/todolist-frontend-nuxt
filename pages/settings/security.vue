@@ -14,8 +14,8 @@
           </div>
 
           <div class="md:w-2/3">
-            <input id="current_password" v-model="form.current_password" v-focus class="form-control" :class="{ 'border-red mb-3' : form.errors.has('current_password') }" type="password" name="current_password" placeholder="Your current password">
-            <p v-if="form.errors.has('current_password')" class="text-red text-xs italic">
+            <input id="current_password" v-model="form.current_password" v-focus class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('current_password') }" type="password" name="current_password" placeholder="Your current password">
+            <p v-if="form.errors.has('current_password')" class="text-red-500 text-xs italic">
               {{ form.errors.get('current_password') }}
             </p>
           </div>
@@ -29,8 +29,8 @@
           </div>
 
           <div class="md:w-2/3">
-            <input id="password" v-model="form.password" class="form-control" :class="{ 'border-red mb-3' : form.errors.has('password') }" type="password" name="password" placeholder="Your new password">
-            <p v-if="form.errors.has('password')" class="text-red text-xs italic">
+            <input id="password" v-model="form.password" class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('password') }" type="password" name="password" placeholder="Your new password">
+            <p v-if="form.errors.has('password')" class="text-red-500 text-xs italic">
               {{ form.errors.get('password') }}
             </p>
           </div>
@@ -44,8 +44,8 @@
           </div>
 
           <div class="md:w-2/3">
-            <input id="password_confirmation" v-model="form.password_confirmation" class="form-control" :class="{ 'border-red mb-3' : form.errors.has('password_confirmation') }" type="password" name="password_confirmation" placeholder="Your new password confirmation">
-            <p v-if="form.errors.has('password_confirmation')" class="text-red text-xs italic">
+            <input id="password_confirmation" v-model="form.password_confirmation" class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('password_confirmation') }" type="password" name="password_confirmation" placeholder="Your new password confirmation">
+            <p v-if="form.errors.has('password_confirmation')" class="text-red-500 text-xs italic">
               {{ form.errors.get('password_confirmation') }}
             </p>
           </div>

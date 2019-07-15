@@ -1,5 +1,5 @@
 <template>
-  <div v-if="error" class="bg-red-100 border-t-4 border-red shadow-md text-red-600 px-6 py-3 rounded relative mb-3" role="alert">
+  <div v-if="error" class="bg-red-100 border-t-4 border-red-500 shadow-md text-red-600 px-6 py-3 rounded relative mb-3" role="alert">
     <div class="flex">
       <fa icon="exclamation-triangle" class="mr-2" />
 

@@ -10,7 +10,7 @@
           <fa :icon="['far', 'clock']" class="mr-1 text-gray-600" />
           <datetime v-model="form.due_at" type="datetime" placeholder="Due at" :minute-step="5" input-class="text-gray-600" />
 
-          <span v-if="form.due_at" class="flex-none rounded-full bg-gray-500 hover:bg-red h-6 w-6 cursor-pointer flex items-center justify-center shadow" @click="clearDueAt">
+          <span v-if="form.due_at" class="flex-none rounded-full bg-gray-500 hover:bg-red-500 h-6 w-6 cursor-pointer flex items-center justify-center shadow" @click="clearDueAt">
             <fa icon="times" class="text-white" />
           </span>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen flex justify-center items-center">
     <div class="w-full max-w-xs">
-      <h1 class="text-center mb-6">
+      <h1 class="text-4xl font-bold text-center mb-6">
         <nuxt-link class="text-gray-900 no-underline hover:underline" to="/" exact>
           Todolist
         </nuxt-link>
@@ -13,8 +13,8 @@
             Email
           </label>
 
-          <input id="email" v-model="form.email" v-focus class="form-control" :class="{ 'border-red mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
-          <p v-if="form.errors.has('email')" class="text-red text-xs italic">
+          <input id="email" v-model="form.email" v-focus class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('email') }" type="email" name="email" placeholder="Email">
+          <p v-if="form.errors.has('email')" class="text-red-500 text-xs italic">
             {{ form.errors.get('email') }}
           </p>
         </div>
@@ -24,8 +24,8 @@
             Password
           </label>
 
-          <input id="password" v-model="form.password" class="form-control" :class="{ 'border-red mb-3' : form.errors.has('password') }" type="password" name="password" placeholder="Password">
-          <p v-if="form.errors.has('password')" class="text-red text-xs italic">
+          <input id="password" v-model="form.password" class="form-control" :class="{ 'border-red-500 mb-3' : form.errors.has('password') }" type="password" name="password" placeholder="Password">
+          <p v-if="form.errors.has('password')" class="text-red-500 text-xs italic">
             {{ form.errors.get('password') }}
           </p>
         </div>
