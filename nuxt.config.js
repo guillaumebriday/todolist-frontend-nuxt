@@ -17,7 +17,8 @@ export default {
   loading: false,
 
   env: {
-    baseURL: BASE_URL
+    baseURL: BASE_URL,
+    pusherAppKey: process.env.PUSHER_APP_KEY
   },
 
   /*

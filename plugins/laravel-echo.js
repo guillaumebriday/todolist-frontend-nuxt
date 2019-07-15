@@ -1,12 +1,12 @@
 import Echo from 'laravel-echo'
 import Pusher from 'pusher-js'
 
-if (process.env.PUSHER_APP_KEY) {
+if (process.env.pusherAppKey) {
   window.Pusher = Pusher
 
   window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: process.env.PUSHER_APP_KEY,
+    key: process.env.pusherAppKey,
     cluster: 'eu',
     encrypted: true,
     authEndpoint: `${process.env.baseURL}/broadcasting/auth`,
