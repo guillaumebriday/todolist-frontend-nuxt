@@ -1,3 +1,7 @@
-import axios from 'axios'
-
-axios.defaults.baseURL = `${process.env.baseURL}/api/v1/`
+export default function ({ $axios }) {
+  $axios.onRequest(config => {
+    if (window.Echo.socketId()) {
+      config.headers['X-Socket-Id'] = window.Echo.socketId()
+    }
+  })
+}
