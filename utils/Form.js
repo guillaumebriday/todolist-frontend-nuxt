@@ -66,4 +66,13 @@ export default class Form {
       this[field] = ''
     }
   }
+
+  /**
+   * Handle a failed form submission.
+   *
+   * @param {object} errors
+   */
+  onFail (errors) {
+    this.errors.record(errors)
+  }
 }
