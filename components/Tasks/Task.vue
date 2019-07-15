@@ -20,7 +20,7 @@
 
         <loading-button
           :is-loading="isRemoveLoading"
-          :class="[isRemoveLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:underline hover:text-red']"
+          :class="[isRemoveLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:underline hover:text-red-500']"
           type="button"
           icon="trash"
           class="mx-4 text-gray-800 text-sm"
