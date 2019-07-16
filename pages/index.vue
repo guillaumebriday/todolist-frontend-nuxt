@@ -172,7 +172,7 @@
       </p>
 
       <p class="text-center text-gray-500 text-xs">
-        Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend-vuejs" class="text-gray-500">
+        Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend-nuxt" class="text-gray-500">
           <fa :icon="['fab', 'github']" /> GitHub
         </a>.
       </p>
