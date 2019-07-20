@@ -30,6 +30,7 @@ Setting up your development environment on your local machine :
 ```
 $ git clone https://github.com/guillaumebriday/todolist-frontend-nuxt.git
 $ cd todolist-frontend-nuxt
+$ cp .env.example .env
 $ yarn install
 $ yarn dev
 ```
