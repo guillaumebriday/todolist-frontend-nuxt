@@ -1432,6 +1432,14 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
+"@vuex-orm/core@0.32.0":
+  version "0.32.0"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.0.tgz#2442297ee414e5a1a798797d6524a0f37db6ac37"
+  integrity sha512-IcwHl8hu+MHhKvSPLv+l6dOcm2xHv/161fW6Xoh6e1dspKedaQnXrwiNf2EPGWVMCX4slaKGUd78/pzUwTCMHA==
+  dependencies:
+    normalizr "^3.4.0"
+    vuex "^3.1.1"
+
 "@vuex-orm/core@^0.31.13":
   version "0.31.13"
   resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.31.13.tgz#b9516d74d4bcbf7906aa6fbae5298359287af874"
@@ -1440,15 +1448,7 @@
     normalizr "^3.4.0"
     vuex "^3.1.1"
 
-"@vuex-orm/core@^0.32.0":
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.0.tgz#2442297ee414e5a1a798797d6524a0f37db6ac37"
-  integrity sha512-IcwHl8hu+MHhKvSPLv+l6dOcm2xHv/161fW6Xoh6e1dspKedaQnXrwiNf2EPGWVMCX4slaKGUd78/pzUwTCMHA==
-  dependencies:
-    normalizr "^3.4.0"
-    vuex "^3.1.1"
-
-"@vuex-orm/plugin-axios@^0.5.1":
+"@vuex-orm/plugin-axios@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@vuex-orm/plugin-axios/-/plugin-axios-0.5.1.tgz#405c09ffe4ad892453466aa5a1cb487efd01fea9"
   integrity sha512-GFfrjnX5z/j4pa2V9q9kIlP2sRuMgKw5LUnsYJ4riwUY0/bNNgrKQG3ze3HZbWT2tk3XFFibNRC5Xf3t0y5Lyg==
