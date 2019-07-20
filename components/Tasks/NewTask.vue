@@ -33,6 +33,7 @@ import { mixin as clickaway } from 'vue-clickaway'
 import Form from '@/utils/Form'
 import TaskForm from '@/components/Tasks/TaskForm'
 import LoadingButton from '@/components/LoadingButton'
+import Task from '@/models/Task'
 
 export default {
   components: {
@@ -69,15 +70,16 @@ export default {
       this.isLoading = true
       this.error = null
 
-      this.$store.dispatch('tasks/addTask', {
-        title: this.form.title,
-        due_at: dayjs(this.form.due_at).isValid() ? dayjs(this.form.due_at).second(0) : null
+      Task.$create({
+        data: {
+          title: this.form.title,
+          due_at: dayjs(this.form.due_at).isValid() ? dayjs(this.form.due_at).second(0) : null
+        }
+      }).then(() => {
+        this.form.reset()
+        this.$refs.taskForm.$refs.task.focus()
+        this.isLoading = false
       })
-        .then(() => {
-          this.form.reset()
-          this.$refs.taskForm.$refs.task.focus()
-          this.isLoading = false
-        })
         .catch(error => {
           this.error = error.response.data
           this.isLoading = false

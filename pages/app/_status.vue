@@ -55,10 +55,11 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters } from 'vuex'
 import Task from '@/components/Tasks/Task'
 import NewTask from '@/components/Tasks/NewTask'
 import LoadingButton from '@/components/LoadingButton'
+import TaskModel from '@/models/Task'
 
 export default {
   components: {
@@ -84,9 +85,9 @@ export default {
 
   computed: {
     ...mapGetters({
-      allTasks: 'tasks/allTasks',
-      activeTasks: 'tasks/activeTasks',
-      completedTasks: 'tasks/completedTasks'
+      allTasks: 'entities/tasks/allTasks',
+      activeTasks: 'entities/tasks/activeTasks',
+      completedTasks: 'entities/tasks/completedTasks'
     }),
 
     tasks () {
@@ -98,7 +99,7 @@ export default {
     },
 
     filteredTasks () {
-      return this.$store.getters['tasks/filteredTasks'](this.status)
+      return TaskModel.getters('filteredTasks')(this.status)
     },
 
     status () {
@@ -110,7 +111,7 @@ export default {
         return false
       }
 
-      return this.$store.getters['tasks/timeToChill'](this.status)
+      return TaskModel.getters('timeToChill')(this.status)
     }
   },
 
@@ -119,24 +120,18 @@ export default {
 
     if (window.Echo) {
       window.Echo.private(`App.User.${this.$auth.user.data.id}`)
-        .listen('TaskCreated', e => this.addTask(e.task))
-        .listen('TaskUpdated', e => this.updateTask(e.task))
-        .listen('TaskDeleted', e => this.removeTask(e.task))
-        .listen('TasksDeleted', e => this.tasksDeleted())
+        .listen('TaskCreated', e => TaskModel.insert({ data: e.task }))
+        .listen('TaskUpdated', e => TaskModel.update({ where: e.task.id, data: e.task }))
+        .listen('TaskDeleted', e => TaskModel.delete(e.task.id))
+        .listen('TasksDeleted', e => TaskModel.delete(task => task.is_completed))
     }
   },
 
   methods: {
-    ...mapMutations({
-      addTask: 'tasks/addTask',
-      updateTask: 'tasks/updateTask',
-      removeTask: 'tasks/removeTask'
-    }),
-
     getTasks () {
       this.isLoading = true
 
-      this.$store.dispatch('tasks/fetchTasks')
+      TaskModel.$fetch()
         .then(() => {
           this.isLoading = false
           this.setInitialTasks([...this.filteredTasks])
@@ -171,7 +166,7 @@ export default {
 
       this.isRemoveLoading = true
 
-      this.$store.dispatch('tasks/deleteTasks')
+      TaskModel.dispatch('deleteTasks')
         .then(() => {
           this.isRemoveLoading = false
         })

@@ -61,6 +61,7 @@ import advancedFormat from 'dayjs/plugin/advancedFormat'
 import Form from '@/utils/Form'
 import TaskForm from '@/components/Tasks/TaskForm'
 import LoadingButton from '@/components/LoadingButton'
+import Task from '@/models/Task'
 
 dayjs.extend(relativeTime)
 dayjs.extend(advancedFormat)
@@ -122,13 +123,12 @@ export default {
       this.isToggleLoading = true
       this.error = null
 
-      this.$store.dispatch('tasks/updateTask', {
-        task: this.task,
-        params: { is_completed: !this.task.is_completed }
+      Task.$update({
+        params: { id: this.task.id },
+        data: { is_completed: !this.task.is_completed }
+      }).then(() => {
+        this.isToggleLoading = false
       })
-        .then(() => {
-          this.isToggleLoading = false
-        })
         .catch(error => {
           this.error = error.response.data
           this.isToggleLoading = false
@@ -143,19 +143,18 @@ export default {
       this.isUpdateLoading = true
       this.error = null
 
-      this.$store.dispatch('tasks/updateTask', {
-        task: this.task,
-        params: {
+      Task.$update({
+        params: { id: this.task.id },
+        data: {
           title: this.form.title,
           due_at: dayjs(this.form.due_at).isValid() ? dayjs(this.form.due_at).second(0) : null
         }
-      })
-        .then(data => {
-          this.form.due_at = data.due_at
+      }).then(data => {
+        this.form.due_at = data.due_at
 
-          this.isUpdateLoading = false
-          this.editTask = false
-        })
+        this.isUpdateLoading = false
+        this.editTask = false
+      })
         .catch(error => {
           this.isUpdateLoading = false
           this.error = error.response.data
@@ -182,7 +181,9 @@ export default {
       this.isRemoveLoading = true
       this.error = null
 
-      this.$store.dispatch('tasks/removeTask', this.task)
+      Task.$delete({
+        params: { id: this.task.id }
+      })
         .catch(error => {
           this.error = error.response.data
         })

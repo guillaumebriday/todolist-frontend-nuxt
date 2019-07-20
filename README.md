@@ -22,6 +22,8 @@ The purpose of this repository is to consume API, provide by [a Laravel Applicat
 - [@nuxtjs/axios](https://github.com/nuxt-community/axios-module)
 - [@nuxtjs/dotenv](https://github.com/nuxt-community/dotenv-module)
 - [@nuxtjs/pwa](https://github.com/nuxt-community/pwa-module)
+- [@vuex-orm/core](https://github.com/vuex-orm/vuex-orm)
+- [@vuex-orm/plugin-axios](https://github.com/vuex-orm/plugin-axios)
 - [ESLint](https://eslint.org/)
 
 ## Installation
