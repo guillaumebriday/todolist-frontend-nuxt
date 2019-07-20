@@ -1,5 +1,6 @@
 # Todolist-frontend-nuxt Application
 
+[![Build Status](https://travis-ci.org/guillaumebriday/todolist-frontend-nuxt.svg?branch=master)](https://travis-ci.org/guillaumebriday/todolist-frontend-nuxt)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/61117a85-2c1d-4308-be10-3c77413e8a74/deploy-status)](https://app.netlify.com/sites/todolist-frontend-nuxt/deploys)
 
 > Frontend for https://github.com/guillaumebriday/todolist-backend-laravel app, built for a serie of articles on my [blog](https://guillaumebriday.fr/).
