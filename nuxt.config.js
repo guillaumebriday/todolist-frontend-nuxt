@@ -134,8 +134,9 @@ export default {
                 extensions: ['vue']
               }
             ],
+            whitelist: ['html', 'body'],
             whitelistPatterns: () => {
-              return [/^fade-/]
+              return [/^fade-|vdatetime-/]
             }
           })
         )
