@@ -34,7 +34,7 @@
     "postcss-preset-env": "6.7.0",
     "purgecss-webpack-plugin": "1.5.0",
     "pusher-js": "5.0.0",
-    "tailwindcss": "1.0.6",
+    "tailwindcss": "1.1.0",
     "vue-clickaway": "2.2.2",
     "vue-datetime": "1.0.0-beta.10",
     "weekstart": "1.0.0"
