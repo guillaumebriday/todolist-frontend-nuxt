@@ -30,7 +30,7 @@
     "glob-all": "3.1.0",
     "laravel-echo": "1.5.4",
     "luxon": "1.17.2",
-    "nuxt": "2.8.1",
+    "nuxt": "2.9.1",
     "postcss-preset-env": "6.7.0",
     "purgecss-webpack-plugin": "1.5.0",
     "pusher-js": "5.0.0",
