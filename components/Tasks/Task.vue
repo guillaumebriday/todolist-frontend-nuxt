@@ -147,7 +147,7 @@ export default {
         params: { id: this.task.id },
         data: {
           title: this.form.title,
-          due_at: dayjs(this.form.due_at).isValid() ? dayjs(this.form.due_at).second(0) : null
+          due_at: dayjs(this.form.due_at).second(0)
         }
       }).then(data => {
         this.form.due_at = data.due_at
