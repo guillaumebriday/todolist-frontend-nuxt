@@ -17,7 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "5.10.2",
     "@fortawesome/free-regular-svg-icons": "5.10.2",
     "@fortawesome/free-solid-svg-icons": "5.10.2",
-    "@fortawesome/vue-fontawesome": "0.1.6",
+    "@fortawesome/vue-fontawesome": "0.1.7",
     "@nuxtjs/auth": "4.8.1",
     "@nuxtjs/axios": "5.6.0",
     "@nuxtjs/dotenv": "1.4.0",
