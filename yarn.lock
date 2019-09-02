@@ -1555,12 +1555,12 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vuex-orm/core@0.32.1":
-  version "0.32.1"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.1.tgz#40d04aba5373b9ae833b4d7b42b2c07746a4f52f"
-  integrity sha512-zy3xj+6robrjNx5nJF73GlhAlcaespLrOByAQAILo/4q1IP542YUPAO+Kr1DH4n0iMV3vaj1275A741+y2djOg==
+"@vuex-orm/core@0.32.2":
+  version "0.32.2"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.2.tgz#9926d133646eaa9be381382b44766ac030a1787f"
+  integrity sha512-1J4sjq0m3M25hjxNKCH+GURPmwjnEezJV19TF2zxC2EqNUeoxUYPqcR1LhOR+f0nPDmZ9uQjLeT1kVpjT0hgFQ==
   dependencies:
-    normalizr "^3.4.0"
+    normalizr "^3.4.1"
     vuex "^3.1.1"
 
 "@vuex-orm/core@^0.31.13":
@@ -6205,6 +6205,11 @@ normalizr@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.4.0.tgz#fe79fd77768e0ae99944a8c35cbdb58521ab5d34"
   integrity sha512-0dQLKpvsSb2f+vZwj78L855OMn9aeMQ0dQhduRqX3GkJh+k6rN9kcftxBV/VkW1n4q9OuV6F43Angn+pNbjg9w==
+
+normalizr@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.4.1.tgz#cf4f8ac7a4a0dd7fe504b77cbe9dd533cb3e45b5"
+  integrity sha512-gei+tJucERU8vYN6TFQL2k5YMLX2Yh7nlylKMJC65+Uu/LS3xQCDJc8cies72aHouycKYyVgcnyLRbaJsigXKw==
 
 npm-bundled@^1.0.1:
   version "1.0.6"
