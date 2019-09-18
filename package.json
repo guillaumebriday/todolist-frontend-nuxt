@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.22",
+    "@fortawesome/fontawesome-svg-core": "1.2.23",
     "@fortawesome/free-brands-svg-icons": "5.10.2",
     "@fortawesome/free-regular-svg-icons": "5.10.2",
     "@fortawesome/free-solid-svg-icons": "5.10.2",
