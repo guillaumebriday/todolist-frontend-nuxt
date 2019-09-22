@@ -29,7 +29,7 @@
     "dayjs": "1.8.16",
     "glob-all": "3.1.0",
     "laravel-echo": "1.5.4",
-    "luxon": "1.18.2",
+    "luxon": "1.19.0",
     "nuxt": "2.9.2",
     "postcss-preset-env": "6.7.0",
     "purgecss-webpack-plugin": "1.6.0",
