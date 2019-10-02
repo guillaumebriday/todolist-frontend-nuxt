@@ -23,7 +23,7 @@
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/google-analytics": "2.2.0",
     "@nuxtjs/pwa": "3.0.0-beta.19",
-    "@vuex-orm/core": "0.32.2",
+    "@vuex-orm/core": "0.32.3",
     "@vuex-orm/plugin-axios": "0.5.1",
     "cross-env": "5.2.1",
     "dayjs": "1.8.16",
