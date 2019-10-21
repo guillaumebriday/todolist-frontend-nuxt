@@ -1279,10 +1279,10 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vuex-orm/core@0.32.4":
-  version "0.32.4"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.4.tgz#440bd0fa13dc45d4373ce5eaa900e9691132f6ad"
-  integrity sha512-J4nVxRsm6JiGujOqZioNHsMFh2z9UbdH8HIaM6m2sgvzyM5KAYUEWDm6wMWOo6FB0HA3U4SGLDwf2Mkgchx3nQ==
+"@vuex-orm/core@0.32.5":
+  version "0.32.5"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.5.tgz#bd018551273a81d106524a1a8a6fbed251bc79bf"
+  integrity sha512-8RU9OF1GrjKaylTnkH21iYrYioOVFlDpH09KLWTF//xppOiClquWJVfUb30na61eGn4rcwbeoHST3T/9r8w6RQ==
   dependencies:
     normalizr "^3.4.1"
     vuex "^3.1.1"
