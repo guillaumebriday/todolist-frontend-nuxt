@@ -6,5 +6,9 @@
     ":automergeMinor",
     ":automergeBranchPush",
     "schedule:monthly"
+  ],
+  "ignoreDeps": [
+    "@vuex-orm/core",
+    "@vuex-orm/plugin-axios"
   ]
 }

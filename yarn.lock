@@ -1295,21 +1295,30 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vuex-orm/core@0.33.0", "@vuex-orm/core@^0.33.0":
-  version "0.33.0"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.33.0.tgz#8daa56114bc3fc22d707d228923ad2ba8b51c425"
-  integrity sha512-1Z9dqPHoVRHE/YfcOGHY2aRF+1uNwzGztIxYWe4eM649ZUF36IE2+rIpGf/CqWHFIZrJtoSh9R0AjCBDzy6s7w==
+"@vuex-orm/core@0.32.1":
+  version "0.32.1"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.32.1.tgz#40d04aba5373b9ae833b4d7b42b2c07746a4f52f"
+  integrity sha512-zy3xj+6robrjNx5nJF73GlhAlcaespLrOByAQAILo/4q1IP542YUPAO+Kr1DH4n0iMV3vaj1275A741+y2djOg==
   dependencies:
-    normalizr "^3.4.1"
+    normalizr "^3.4.0"
     vuex "^3.1.1"
 
-"@vuex-orm/plugin-axios@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@vuex-orm/plugin-axios/-/plugin-axios-0.8.0.tgz#21acf010871d0fbacee72f0df3f11afe2a23d1c3"
-  integrity sha512-5PJpNPAaTmz7Z8SnZTSR+K/i1nKc0ppS47BCZVLU76FgER1gXkLv8BYbKS5O2PKgxhk1Mn/lp6VnCwSjAGlsNQ==
+"@vuex-orm/core@^0.31.13":
+  version "0.31.13"
+  resolved "https://registry.yarnpkg.com/@vuex-orm/core/-/core-0.31.13.tgz#b9516d74d4bcbf7906aa6fbae5298359287af874"
+  integrity sha512-wnKlfCwafWe4RiYXFKoIhyzhCdD5rlnvW75XAdedHb3Vcj7sKKiC3rgD4MbpbcsUfboX1egePoHnjzcGFqMYeA==
   dependencies:
-    "@vuex-orm/core" "^0.33.0"
+    normalizr "^3.4.0"
+    vuex "^3.1.1"
+
+"@vuex-orm/plugin-axios@https://github.com/guillaumebriday/plugin-axios#qs":
+  version "0.5.1"
+  resolved "https://github.com/guillaumebriday/plugin-axios#517e09fdaa8e22fe3e991c5c7637798870266444"
+  dependencies:
+    "@vuex-orm/core" "^0.31.13"
     axios "^0.19.0"
+    lodash "^4.17.11"
+    qs "^6.9.0"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -5984,10 +5993,10 @@ normalize.css@^8.0.1:
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
-normalizr@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.4.1.tgz#cf4f8ac7a4a0dd7fe504b77cbe9dd533cb3e45b5"
-  integrity sha512-gei+tJucERU8vYN6TFQL2k5YMLX2Yh7nlylKMJC65+Uu/LS3xQCDJc8cies72aHouycKYyVgcnyLRbaJsigXKw==
+normalizr@^3.4.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.5.0.tgz#c2227644cdb31bcc501b25e3f88a8032bae8d730"
+  integrity sha512-wMQ0jvJM5y3mGYipiXdpVgtOeR57AUkg6zEXDDWeQczIc9sdY1Za78qVPDEPL8dCBkTmEzgYGkVrI23NcMfy7Q==
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -7361,6 +7370,11 @@ qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
+
+qs@^6.9.0:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.1.tgz#20082c65cb78223635ab1a9eaca8875a29bf8ec9"
+  integrity sha512-Cxm7/SS/y/Z3MHWSxXb8lIFqgqBowP5JMlTUFyJN88y0SGQhVmZnqFK/PeuMX9LzUyWsqqhNxIyg0jlzq946yA==
 
 query-string@^4.1.0:
   version "4.3.4"
