@@ -21,7 +21,7 @@
     "@nuxtjs/auth": "4.8.5",
     "@nuxtjs/axios": "5.8.0",
     "@nuxtjs/dotenv": "1.4.1",
-    "@nuxtjs/google-analytics": "2.2.1",
+    "@nuxtjs/google-analytics": "2.2.3",
     "@nuxtjs/pwa": "3.0.0-beta.19",
     "@vuex-orm/core": "0.32.1",
     "@vuex-orm/plugin-axios": "https://github.com/guillaumebriday/plugin-axios#qs",
