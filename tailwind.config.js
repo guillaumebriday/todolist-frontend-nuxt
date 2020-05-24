@@ -2,6 +2,18 @@
 const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  purge: {
+    content: [
+      './pages/**/*.vue',
+      './layouts/**/*.vue',
+      './components/**/*.vue'
+    ],
+
+    options: {
+      whitelist: ['html', 'body'],
+      whitelistPatterns: [/^fade-|vdatetime-/]
+    }
+  },
   theme: {
     container: {
       center: true
