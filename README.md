@@ -61,7 +61,7 @@ You could generate a key on [https://pusher.com/](https://pusher.com/).
 
 ## Deploy in production
 
-This application is hosted on [Netlify](https://www.netlify.com/) and available on [https://todolist-nuxt.guillaumebriday.xyz/](https://todolist-nuxt.guillaumebriday.xyz/).
+This application is hosted on [Netlify](https://www.netlify.com/) and available on [https://todolist-nuxt.guillaumebriday.me/](https://todolist-nuxt.guillaumebriday.me/).
 
 ## Contributing
 
