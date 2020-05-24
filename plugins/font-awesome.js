@@ -14,7 +14,8 @@ import {
   faLock,
   faHeart,
   faMobileAlt,
-  faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+  faExclamationTriangle
+} from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faClock, faLightbulb, faCheckCircle } from '@fortawesome/free-regular-svg-icons'
 

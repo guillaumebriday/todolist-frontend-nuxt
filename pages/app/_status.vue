@@ -68,12 +68,6 @@ export default {
     LoadingButton
   },
 
-  head () {
-    return {
-      title: `${this.activeTasks.length} tasks`
-    }
-  },
-
   data () {
     return {
       isLoading: false,
@@ -175,8 +169,13 @@ export default {
     tasksDeleted () {
       this.completedTasks.forEach(task => this.removeTask(task))
     }
-  }
+  },
 
+  head () {
+    return {
+      title: `${this.activeTasks.length} tasks`
+    }
+  }
 }
 </script>
 

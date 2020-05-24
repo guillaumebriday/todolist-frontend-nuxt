@@ -62,12 +62,6 @@ export default {
     LoadingButton
   },
 
-  head () {
-    return {
-      title: 'Login'
-    }
-  },
-
   data () {
     return {
       form: new Form({
@@ -75,12 +69,6 @@ export default {
         password: ''
       }),
       isLoading: false
-    }
-  },
-
-  transition (to, from) {
-    if (from && from.name === 'register') {
-      return 'fade-out-right'
     }
   },
 
@@ -105,6 +93,18 @@ export default {
 
           this.isLoading = false
         })
+    }
+  },
+
+  head () {
+    return {
+      title: 'Login'
+    }
+  },
+
+  transition (to, from) {
+    if (from && from.name === 'register') {
+      return 'fade-out-right'
     }
   }
 }

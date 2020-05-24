@@ -73,18 +73,6 @@ export default {
     LoadingButton
   },
 
-  head () {
-    return {
-      title: 'Security'
-    }
-  },
-
-  transition (to, from) {
-    if (from && from.name === 'settings-profile' && to.name === 'settings-security') {
-      return 'fade-out-right'
-    }
-  },
-
   data () {
     return {
       form: new Form({
@@ -126,6 +114,18 @@ export default {
           this.form.onFail(response.data.errors)
           this.form.resetFields()
         })
+    }
+  },
+
+  head () {
+    return {
+      title: 'Security'
+    }
+  },
+
+  transition (to, from) {
+    if (from && from.name === 'settings-profile' && to.name === 'settings-security') {
+      return 'fade-out-right'
     }
   }
 }

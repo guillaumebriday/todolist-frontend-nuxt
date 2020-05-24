@@ -75,18 +75,6 @@ export default {
     LoadingButton
   },
 
-  head () {
-    return {
-      title: 'Profile'
-    }
-  },
-
-  transition (to, from) {
-    if (from && from.name === 'settings-security' && to.name === 'settings-profile') {
-      return 'fade-out-left'
-    }
-  },
-
   data () {
     return {
       isLoading: false,
@@ -166,6 +154,18 @@ export default {
         .catch(() => {
           this.isDeleteLoading = false
         })
+    }
+  },
+
+  head () {
+    return {
+      title: 'Profile'
+    }
+  },
+
+  transition (to, from) {
+    if (from && from.name === 'settings-security' && to.name === 'settings-profile') {
+      return 'fade-out-left'
     }
   }
 }
