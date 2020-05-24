@@ -9,7 +9,7 @@
             </h1>
 
             <h2 class="text-2xl sm:text-3xl text-indigo-800 opacity-75 font-normal leading-tight mb-8">
-              An Open source todolist application made with Laravel And Vue.js
+              An Open source todolist application made with Laravel And Nuxt.js
             </h2>
 
             <div class="flex flex-col sm:flex-row justify-center pt-8">
