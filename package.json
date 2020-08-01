@@ -26,7 +26,7 @@
     "@vuex-orm/plugin-axios": "https://github.com/guillaumebriday/plugin-axios#qs",
     "cross-env": "7.0.2",
     "dayjs": "1.8.27",
-    "laravel-echo": "1.8.0",
+    "laravel-echo": "1.8.1",
     "luxon": "1.24.1",
     "nuxt": "2.12.2",
     "postcss-preset-env": "6.7.0",
