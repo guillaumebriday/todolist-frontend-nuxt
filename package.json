@@ -19,7 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/vue-fontawesome": "0.1.9",
     "@nuxtjs/auth": "4.9.1",
-    "@nuxtjs/axios": "5.10.3",
+    "@nuxtjs/axios": "5.12.2",
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/pwa": "3.0.0-beta.20",
     "@vuex-orm/core": "0.32.1",
