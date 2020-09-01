@@ -27,7 +27,7 @@
     "cross-env": "7.0.2",
     "dayjs": "1.8.27",
     "laravel-echo": "1.8.0",
-    "luxon": "1.24.1",
+    "luxon": "1.25.0",
     "nuxt": "2.12.2",
     "postcss-preset-env": "6.7.0",
     "pusher-js": "6.0.3",
