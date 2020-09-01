@@ -7607,10 +7607,10 @@ purgecss@^2.2.0:
     postcss "7.0.28"
     postcss-selector-parser "^6.0.2"
 
-pusher-js@6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-6.0.3.tgz#97e4dabe74bf39cb6978ea649fb9e13d8d7a8721"
-  integrity sha512-l0MHlrpG+D4R6jj+vjqnJNjawBqKCjQ4Y/YARNsWFbXGKNl77xX8pUpbv55Al+dFHGkc7wI2fDXw/BDLleF9Lg==
+pusher-js@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-7.0.0.tgz#9716ae3f79ca7f87a269764f278a8e14494a4e20"
+  integrity sha512-2ZSw8msMe6EKNTebQSthRInrWUK9bo3zXPmQx0bfeDFJdSnTWUROhdAhmpRQREHzqrL+l4imv/3uwgIQHUO0oQ==
   dependencies:
     tweetnacl "^1.0.3"
 
